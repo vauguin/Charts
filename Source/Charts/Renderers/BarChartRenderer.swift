@@ -427,7 +427,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
                 context.setFillColor(dataSet.color(atIndex: j).cgColor)
             }
             
-            context.fill(barRect)
+            drawBarPath(context: context, bar: barRect, dataSet: dataSet)
             
             if drawBorder
             {
@@ -453,6 +453,10 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
         }
         
         context.restoreGState()
+    }
+    
+    open func drawBarPath(context: CGContext, bar: CGRect, dataSet: IBarChartDataSet) {
+        context.fill(bar)
     }
     
     open func prepareBarHighlight(

@@ -156,35 +156,35 @@ open class YAxisRenderer: AxisRendererBase
         guard let
             yAxis = self.axis as? YAxis
             else { return }
-        
+
         if !yAxis.isEnabled
         {
             return
         }
-        
+
         if yAxis.drawGridLinesEnabled
         {
             let positions = transformedPositions()
-            
+
             context.saveGState()
             defer { context.restoreGState() }
             context.clip(to: self.gridClippingRect)
-            
+
             context.setShouldAntialias(yAxis.gridAntialiasEnabled)
             context.setStrokeColor(yAxis.gridColor.cgColor)
             context.setLineWidth(yAxis.gridLineWidth)
             context.setLineCap(yAxis.gridLineCap)
-            
+
             if yAxis.gridLineDashLengths != nil
             {
                 context.setLineDash(phase: yAxis.gridLineDashPhase, lengths: yAxis.gridLineDashLengths)
-                
+
             }
             else
             {
                 context.setLineDash(phase: 0.0, lengths: [])
             }
-            
+
             // draw the grid
             for i in 0 ..< positions.count
             {

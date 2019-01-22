@@ -18,6 +18,11 @@ import CoreGraphics
 
 open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
 {
+    public enum BarChartRendererStyle {
+        case Default
+        case Rounded
+    }
+    
     /// A nested array of elements ordered logically (i.e not in visual/drawing order) for use with VoiceOver
     ///
     /// Its use is apparent when there are multiple data sets, since we want to read bars in left to right order,
@@ -427,7 +432,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
                 context.setFillColor(dataSet.color(atIndex: j).cgColor)
             }
             
-            drawBarPath(context: context, bar: barRect, dataSet: dataSet)
+            drawBarPath(context: context, bar: barRect, data: dataSet.entryForIndex(j))
             
             if drawBorder
             {
@@ -455,7 +460,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
         context.restoreGState()
     }
     
-    open func drawBarPath(context: CGContext, bar: CGRect, dataSet: IBarChartDataSet) {
+    open func drawBarPath(context: CGContext, bar: CGRect, data: ChartDataEntry?) {
         context.fill(bar)
     }
     

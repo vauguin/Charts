@@ -25,12 +25,23 @@ open class BarChartView: BarLineChartViewBase, BarChartDataProvider
     {
         super.initialize()
         
-        renderer = RoundedBarChartRenderer(dataProvider: self, animator: _animator, viewPortHandler: _viewPortHandler)
+        renderer = BarChartRenderer(dataProvider: self, animator: _animator, viewPortHandler: _viewPortHandler)
         
         self.highlighter = BarHighlighter(chart: self)
         
         self.xAxis.spaceMin = 0.5
         self.xAxis.spaceMax = 0.5
+    }
+    
+    open override func setRendererStyle(style: BarChartRenderer.BarChartRendererStyle) {
+        switch style {
+        case .Default:
+            renderer = BarChartRenderer(dataProvider: self, animator: _animator, viewPortHandler: _viewPortHandler)
+        case .Rounded:
+            renderer = RoundedBarChartRenderer(dataProvider: self, animator: _animator, viewPortHandler: _viewPortHandler)
+        }
+        
+        setNeedsDisplay()
     }
     
     internal override func calcMinMax()

@@ -51,6 +51,7 @@
     
     _chartView.drawBarShadowEnabled = NO;
     _chartView.drawValueAboveBarEnabled = YES;
+    _chartView.drawMarkers = NO;
     
     _chartView.maxVisibleCount = 60;
     
@@ -58,6 +59,7 @@
     xAxis.labelPosition = XAxisLabelPositionBottom;
     xAxis.labelFont = [UIFont systemFontOfSize:10.f];
     xAxis.drawGridLinesEnabled = NO;
+    xAxis.drawAxisLineEnabled = NO;
     xAxis.granularity = 1.0; // only intervals of 1 day
     xAxis.labelCount = 7;
     xAxis.valueFormatter = [[DayAxisValueFormatter alloc] initForChart:_chartView];
@@ -69,6 +71,8 @@
     leftAxisFormatter.positiveSuffix = @" $";
     
     ChartYAxis *leftAxis = _chartView.leftAxis;
+    leftAxis.drawGridLinesEnabled = NO;
+    leftAxis.drawAxisLineEnabled = NO;
     leftAxis.labelFont = [UIFont systemFontOfSize:10.f];
     leftAxis.labelCount = 8;
     leftAxis.valueFormatter = [[ChartDefaultAxisValueFormatter alloc] initWithFormatter:leftAxisFormatter];
@@ -79,6 +83,7 @@
     ChartYAxis *rightAxis = _chartView.rightAxis;
     rightAxis.enabled = YES;
     rightAxis.drawGridLinesEnabled = NO;
+    rightAxis.drawAxisLineEnabled = NO;
     rightAxis.labelFont = [UIFont systemFontOfSize:10.f];
     rightAxis.labelCount = 8;
     rightAxis.valueFormatter = leftAxis.valueFormatter;

@@ -310,6 +310,13 @@
 
 - (void)setupBarLineChartView:(BarLineChartViewBase *)chartView
 {
+    ChartAnimator * animator = [[ChartAnimator alloc] init];
+    animator.delegate = chartView;
+    CGRect bounds = chartView.bounds;
+    ChartViewPortHandler * viewPortHandler = [[ChartViewPortHandler alloc] initWithWidth:bounds.size.width height:bounds.size.height];
+    RoundedBarChartRenderer * renderer = [[RoundedBarChartRenderer alloc] initWithDataProvider:chartView animator:animator viewPortHandler:viewPortHandler];
+    chartView.renderer = renderer;
+    
     chartView.chartDescription.enabled = NO;
     
     chartView.drawGridBackgroundEnabled = NO;

@@ -485,7 +485,6 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
             context.closePath()
             context.setFillColor(backgroundColor)
             context.fillPath()
-            context.saveGState()
 
             if y > 0 {
                 // Over bar
@@ -496,7 +495,6 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
                     context.closePath()
                     context.setFillColor(overThresholdColor)
                     context.fillPath()
-                    context.saveGState()
                 }
 
                 // Under bar
@@ -511,7 +509,6 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
                 context.closePath()
                 context.setFillColor(underThresholdColor)
                 context.fillPath()
-                context.saveGState()
             }
         } else {
             context.fill(bar)

@@ -46,6 +46,7 @@
                      ];
     
     [self setupBarLineChartView:_chartView];
+    ((BarChartRenderer *)_chartView.renderer).style = BarChartRendererStyleRounded;
     
     _chartView.delegate = self;
     

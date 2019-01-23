@@ -18,10 +18,7 @@ import CoreGraphics
 
 open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
 {
-    public enum BarChartRendererStyle {
-        case Default
-        case Rounded
-    }
+    @objc open var roundedComponent: RoundedBarChartComponent?
     
     /// A nested array of elements ordered logically (i.e not in visual/drawing order) for use with VoiceOver
     ///
@@ -461,7 +458,53 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
     }
     
     open func drawBarPath(context: CGContext, bar: CGRect, data: ChartDataEntry?) {
-        context.fill(bar)
+        if let rc = roundedComponent {
+            let threshold = CGFloat(rc.threshold)
+            let radius = CGFloat(rc.radius)
+            let maxWidth = CGFloat(rc.maxWidth)
+
+            let width = bar.size.width > maxWidth ?
+                maxWidth : bar.size.width
+
+            let height = viewPortHandler.contentHeight
+            let y = CGFloat(data?.y ?? 0)
+
+            // Background bar
+            let yOrigin = (2 * radius) / 3
+            let backgroundBar = CGRect(origin: CGPoint(x: bar.origin.x, y: yOrigin), size: CGSize(width: width, height: height))
+            var roundRect = UIBezierPath(roundedRect: backgroundBar, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: radius))
+            context.addPath(roundRect.cgPath)
+            context.closePath()
+            context.setFillColor(rc.backgroundColor)
+            context.fillPath()
+
+            if y > 0 {
+                // Over bar
+                if y >= threshold {
+                    let fullBar = CGRect(origin: bar.origin, size: CGSize(width: width, height: bar.size.height))
+                    roundRect = UIBezierPath(roundedRect: fullBar, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: radius))
+                    context.addPath(roundRect.cgPath)
+                    context.closePath()
+                    context.setFillColor(rc.overThresholdColor)
+                    context.fillPath()
+                }
+
+                // Under bar
+                var thresholdedBar = CGRect(origin: bar.origin, size: CGSize(width: width, height: bar.size.height))
+                if y >= threshold {
+                    thresholdedBar.size.height = (threshold * thresholdedBar.size.height) / y
+                    // Recalculate the origin
+                    thresholdedBar.origin.y += bar.size.height - thresholdedBar.size.height
+                }
+                roundRect = UIBezierPath(roundedRect: thresholdedBar, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: radius))
+                context.addPath(roundRect.cgPath)
+                context.closePath()
+                context.setFillColor(rc.underThresholdColor)
+                context.fillPath()
+            }
+        } else {
+            context.fill(bar)
+        }
     }
     
     open func prepareBarHighlight(

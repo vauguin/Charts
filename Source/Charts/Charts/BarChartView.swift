@@ -20,28 +20,17 @@ open class BarChartView: BarLineChartViewBase, BarChartDataProvider
 
     /// if set to true, a grey area is drawn behind each bar that indicates the maximum value
     private var _drawBarShadowEnabled = false
-    
+
     internal override func initialize()
     {
         super.initialize()
-        
+
         renderer = BarChartRenderer(dataProvider: self, animator: _animator, viewPortHandler: _viewPortHandler)
         
         self.highlighter = BarHighlighter(chart: self)
         
         self.xAxis.spaceMin = 0.5
         self.xAxis.spaceMax = 0.5
-    }
-    
-    open override func setRendererStyle(style: BarChartRenderer.BarChartRendererStyle) {
-        switch style {
-        case .Default:
-            renderer = BarChartRenderer(dataProvider: self, animator: _animator, viewPortHandler: _viewPortHandler)
-        case .Rounded:
-            renderer = RoundedBarChartRenderer(dataProvider: self, animator: _animator, viewPortHandler: _viewPortHandler)
-        }
-        
-        setNeedsDisplay()
     }
     
     internal override func calcMinMax()

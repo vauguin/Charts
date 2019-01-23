@@ -166,10 +166,6 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
         }
     }
     
-    open func setRendererStyle(style: BarChartRenderer.BarChartRendererStyle) {
-        fatalError("setRendererStyle() must be overriden")
-    }
-    
     open override func draw(_ rect: CGRect)
     {
         super.draw(rect)

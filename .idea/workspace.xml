@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d46017a5-bb5f-41c4-9f7b-f6c4e06dccbb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Source/Charts/Renderers/RoundedBarChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Charts/Renderers/RoundedBarChartRenderer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChartsDemo-iOS/Objective-C/DemoBaseViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/ChartsDemo-iOS/Objective-C/DemoBaseViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChartsDemo-iOS/Objective-C/Demos/BarChartViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/ChartsDemo-iOS/Objective-C/Demos/BarChartViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Charts/Charts/BarChartView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Charts/Charts/BarChartView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Charts/Charts/BarLineChartViewBase.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Charts/Charts/BarLineChartViewBase.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Charts/Renderers/BarChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Charts/Renderers/BarChartRenderer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Charts/Renderers/CombinedChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Charts/Renderers/CombinedChartRenderer.swift" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,29 +19,38 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Source/Charts/Renderers/RoundedBarChartRenderer.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="569">
+              <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Source/Charts/Renderers/BarChartRenderer.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7290">
-              <caret line="487" column="23" selection-start-line="487" selection-start-column="23" selection-end-line="487" selection-end-column="23" />
+            <state relative-caret-position="360">
+              <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChartsDemo-iOS/Objective-C/Demos/BarChartViewController.m">
+        <entry file="file://$PROJECT_DIR$/Source/Charts/Charts/CombinedChartView.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+            <state relative-caret-position="301">
+              <caret line="42" column="37" lean-forward="true" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Source/Charts/Renderers/CombinedChartRenderer.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -43,26 +58,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Source/Charts/Charts/BarChartView.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+            <state relative-caret-position="15">
+              <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Source/Charts/Charts/BarLineChartViewBase.swift">
+        <entry file="file://$PROJECT_DIR$/Source/Charts/Utils/Platform.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="479" column="5" selection-start-line="479" selection-start-column="5" selection-end-line="479" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Source/Charts/Renderers/YAxisRenderer.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+            <state relative-caret-position="338">
+              <caret line="420" column="26" lean-forward="true" selection-start-line="420" selection-start-column="26" selection-end-line="420" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -70,7 +76,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Source/Charts/Renderers/AxisRendererBase.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
+            <state relative-caret-position="502">
               <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
             </state>
           </provider>
@@ -78,15 +84,24 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>objc(</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ChartsDemo-iOS/Objective-C/Demos/BarChartViewController.m" />
-        <option value="$PROJECT_DIR$/Source/Charts/Charts/BarLineChartViewBase.swift" />
         <option value="$PROJECT_DIR$/Source/Charts/Renderers/RoundedBarChartRenderer.swift" />
+        <option value="$PROJECT_DIR$/Source/Charts/Charts/BarLineChartViewBase.swift" />
+        <option value="$PROJECT_DIR$/ChartsDemo-iOS/Objective-C/DemoBaseViewController.m" />
+        <option value="$PROJECT_DIR$/ChartsDemo-iOS/Objective-C/Demos/BarChartViewController.m" />
+        <option value="$PROJECT_DIR$/Source/Charts/Renderers/CombinedChartRenderer.swift" />
+        <option value="$PROJECT_DIR$/Source/Charts/Charts/BarChartView.swift" />
+        <option value="$PROJECT_DIR$/Source/Charts/Renderers/BarChartRenderer.swift" />
       </list>
     </option>
   </component>
@@ -128,12 +143,25 @@
             </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Charts" type="1d218c8b:XcodeProjectNode" />
+              <item name="Source" type="fcab9f18:XcodeViewNode" />
+              <item name="Charts" type="fcab9f18:XcodeViewNode" />
+              <item name="Renderers" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
               <item name="ChartsDemo-iOS" type="1d218c8b:XcodeProjectNode" />
             </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="ChartsDemo-iOS" type="1d218c8b:XcodeProjectNode" />
               <item name="Objective-C" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="ChartsDemo-iOS" type="1d218c8b:XcodeProjectNode" />
+              <item name="Objective-C" type="fcab9f18:XcodeViewNode" />
+              <item name="Demos" type="fcab9f18:XcodeViewNode" />
             </path>
           </expand>
           <select />
@@ -177,12 +205,12 @@
       <option name="presentableId" value="Default" />
       <updated>1548150413737</updated>
       <workItem from="1548150416219" duration="2056000" />
-      <workItem from="1548237364410" duration="795000" />
+      <workItem from="1548237364410" duration="3829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2851000" />
+    <option name="totallyTimeSpent" value="5885000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="23" width="1920" height="1057" extended-state="6" />
@@ -190,7 +218,7 @@
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.56815284" visible="true" weight="0.1517572" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.56815284" visible="true" weight="0.19488817" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -207,7 +235,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info active="true" anchor="right" id="Structure" order="5" sideWeight="0.43184713" visible="true" weight="0.20340788" />
+      <window_info anchor="right" id="Structure" order="5" sideWeight="0.43184713" visible="true" weight="0.20340788" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,27 +256,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Source/Charts/Renderers/BarChartRenderer.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7290">
-          <caret line="487" column="23" selection-start-line="487" selection-start-column="23" selection-end-line="487" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChartsDemo-iOS/Objective-C/Demos/BarChartViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Source/Charts/Charts/BarChartView.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Source/Charts/Renderers/YAxisRenderer.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -256,24 +263,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Source/Charts/Renderers/AxisRendererBase.swift">
+    <entry file="file://$PROJECT_DIR$/Source/Charts/Utils/Platform.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
+        <state relative-caret-position="338">
+          <caret line="420" column="26" lean-forward="true" selection-start-line="420" selection-start-column="26" selection-end-line="420" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache.zip!/ModuleCache/10B61/4.2.1/x86_64/macosx10.14/AppKit.NSView/AppKit.NSView.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="468" column="14" selection-start-line="468" selection-start-column="14" selection-end-line="468" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Source/Charts/Charts/BarLineChartViewBase.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="479" column="5" selection-start-line="479" selection-start-column="5" selection-end-line="479" selection-end-column="5" />
+        <state relative-caret-position="1428">
+          <caret line="166" column="5" selection-start-line="166" selection-start-column="5" selection-end-line="166" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/Charts/Renderers/AxisRendererBase.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChartsDemo-iOS/Objective-C/Demos/BarChartViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChartsDemo-iOS/Objective-C/DemoBaseViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="311" column="1" selection-start-line="311" selection-start-column="1" selection-end-line="311" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/Charts/Charts/CombinedChartView.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="42" column="37" lean-forward="true" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/Charts/Charts/BarChartView.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Source/Charts/Renderers/RoundedBarChartRenderer.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="569">
+          <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/Charts/Renderers/CombinedChartRenderer.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/Charts/Renderers/BarChartRenderer.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
         </state>
       </provider>
     </entry>

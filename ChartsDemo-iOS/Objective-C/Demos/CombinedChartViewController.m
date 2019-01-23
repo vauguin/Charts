@@ -47,6 +47,8 @@
                @"Oct", @"Nov", @"Dec"
                ];
     
+    ((CombinedChartRenderer *)_chartView.renderer).barStyle = BarChartRendererStyleRounded;
+    
     _chartView.delegate = self;
     
     _chartView.chartDescription.enabled = NO;

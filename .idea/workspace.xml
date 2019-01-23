@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d46017a5-bb5f-41c4-9f7b-f6c4e06dccbb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/RoundedBarChartComponent.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Charts.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Charts.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartsDemo-iOS/Objective-C/Demos/BarChartViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/ChartsDemo-iOS/Objective-C/Demos/BarChartViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartsDemo-iOS/Objective-C/Demos/CombinedChartViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/ChartsDemo-iOS/Objective-C/Demos/CombinedChartViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Charts/Renderers/BarChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Charts/Renderers/BarChartRenderer.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Charts/Renderers/CombinedChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Charts/Renderers/CombinedChartRenderer.swift" afterDir="false" />
-    </list>
+    <list default="true" id="d46017a5-bb5f-41c4-9f7b-f6c4e06dccbb" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,12 +272,12 @@
       <option name="presentableId" value="Default" />
       <updated>1548150413737</updated>
       <workItem from="1548150416219" duration="2056000" />
-      <workItem from="1548237364410" duration="5635000" />
+      <workItem from="1548237364410" duration="5750000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7691000" />
+    <option name="totallyTimeSpent" value="7806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="23" width="1920" height="1057" extended-state="6" />

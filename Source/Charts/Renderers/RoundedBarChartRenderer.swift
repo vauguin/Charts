@@ -18,11 +18,11 @@ import CoreGraphics
 
 open class RoundedBarChartRenderer: BarChartRenderer
 {
-    var threshold : CGFloat = 30
-    var radius: CGFloat = 15
-    var backgroundColor: CGColor = UIColor(red:0.91, green:0.90, blue:0.90, alpha:1.0).cgColor
-    var underThresholdColor: CGColor = UIColor(red:0.31, green:0.74, blue:0.93, alpha:1.0).cgColor
-    var overThresholdColor: CGColor = UIColor(red:0.13, green:0.48, blue:0.75, alpha:1.0).cgColor
+    open var threshold : CGFloat = 30
+    open var radius: CGFloat = 15
+    open var backgroundColor: CGColor = UIColor(red:0.91, green:0.90, blue:0.90, alpha:1.0).cgColor
+    open var underThresholdColor: CGColor = UIColor(red:0.31, green:0.74, blue:0.93, alpha:1.0).cgColor
+    open var overThresholdColor: CGColor = UIColor(red:0.13, green:0.48, blue:0.75, alpha:1.0).cgColor
     
     var _maxWidth : CGFloat = 15.4
     

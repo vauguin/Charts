@@ -46,30 +46,32 @@ open class RoundedBarChartRenderer: BarChartRenderer
         context.setFillColor(backgroundColor)
         context.fillPath()
         context.saveGState()
-        
-        // Over bar
-        if y >= threshold {
-            let fullBar = CGRect(origin: bar.origin, size: CGSize(width: width, height: bar.size.height))
-            roundRect = UIBezierPath(roundedRect: fullBar, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: radius))
+
+        if y > 0 {
+            // Over bar
+            if y >= threshold {
+                let fullBar = CGRect(origin: bar.origin, size: CGSize(width: width, height: bar.size.height))
+                roundRect = UIBezierPath(roundedRect: fullBar, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: radius))
+                context.addPath(roundRect.cgPath)
+                context.closePath()
+                context.setFillColor(overThresholdColor)
+                context.fillPath()
+                context.saveGState()
+            }
+
+            // Under bar
+            var thresholdedBar = CGRect(origin: bar.origin, size: CGSize(width: width, height: bar.size.height))
+            if y >= threshold {
+                thresholdedBar.size.height = (threshold * thresholdedBar.size.height) / y
+                // Recalculate the origin
+                thresholdedBar.origin.y += bar.size.height - thresholdedBar.size.height
+            }
+            roundRect = UIBezierPath(roundedRect: thresholdedBar, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: radius))
             context.addPath(roundRect.cgPath)
             context.closePath()
-            context.setFillColor(overThresholdColor)
+            context.setFillColor(underThresholdColor)
             context.fillPath()
             context.saveGState()
         }
-
-        // Under bar
-        var thresholdedBar = CGRect(origin: bar.origin, size: CGSize(width: width, height: bar.size.height))
-        if y >= threshold {
-            thresholdedBar.size.height = (threshold * thresholdedBar.size.height) / y
-            // Recalculate the origin
-            thresholdedBar.origin.y += bar.size.height - thresholdedBar.size.height
-        }
-        roundRect = UIBezierPath(roundedRect: thresholdedBar, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: radius))
-        context.addPath(roundRect.cgPath)
-        context.closePath()
-        context.setFillColor(underThresholdColor)
-        context.fillPath()
-        context.saveGState()
     }
 }

@@ -22,7 +22,7 @@ open class CombinedChartRenderer: DataRenderer
     /// if set to true, a grey area is drawn behind each bar that indicates the maximum value
     @objc open var drawBarShadowEnabled = false
     
-    @objc open var barStyle = BarChartRenderer.BarChartRendererStyle.Default
+    @objc open var roundedBarComponent: RoundedBarChartComponent?
     
     internal var _renderers = [DataRenderer]()
     
@@ -52,7 +52,7 @@ open class CombinedChartRenderer: DataRenderer
                 {
                     // Allows to modify the bar style
                     let renderer = BarChartRenderer(dataProvider: chart, animator: animator, viewPortHandler: viewPortHandler)
-                    renderer.style = barStyle
+                    renderer.roundedComponent = roundedBarComponent ?? nil
                     _renderers.append(renderer)
                 }
                 break

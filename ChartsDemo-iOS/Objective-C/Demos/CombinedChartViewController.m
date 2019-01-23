@@ -47,8 +47,9 @@
                @"Oct", @"Nov", @"Dec"
                ];
     
-    ((CombinedChartRenderer *)_chartView.renderer).barStyle = BarChartRendererStyleRounded;
-    
+    RoundedBarChartComponent * rc = [[RoundedBarChartComponent alloc] initWithThreshold:30 radii:15];
+    ((CombinedChartRenderer *)_chartView.renderer).roundedBarComponent = rc;
+
     _chartView.delegate = self;
     
     _chartView.chartDescription.enabled = NO;

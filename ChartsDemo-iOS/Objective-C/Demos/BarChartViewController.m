@@ -46,7 +46,9 @@
                      ];
     
     [self setupBarLineChartView:_chartView];
-    ((BarChartRenderer *)_chartView.renderer).style = BarChartRendererStyleRounded;
+    RoundedBarChartComponent* rc = [[RoundedBarChartComponent alloc] initWithThreshold:30 radii:15];
+    rc.backgroundColor = UIColor.lightGrayColor.CGColor;
+    ((BarChartRenderer *)_chartView.renderer).roundedComponent = rc;
     
     _chartView.delegate = self;
     

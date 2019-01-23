@@ -18,12 +18,7 @@ import CoreGraphics
 
 open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
 {
-    @objc public enum BarChartRendererStyle: Int {
-        case Default
-        case Rounded
-    }
-
-    @objc public var style: BarChartRendererStyle = .Default
+    @objc open var roundedComponent: RoundedBarChartComponent?
     
     /// A nested array of elements ordered logically (i.e not in visual/drawing order) for use with VoiceOver
     ///
@@ -463,16 +458,13 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
     }
     
     open func drawBarPath(context: CGContext, bar: CGRect, data: ChartDataEntry?) {
-        if style == .Rounded {
-            let threshold = CGFloat(30)
-            let radius = CGFloat(15)
-            let maxWidth = CGFloat(15.4)
+        if let rc = roundedComponent {
+            let threshold = CGFloat(rc.threshold)
+            let radius = CGFloat(rc.radius)
+            let maxWidth = CGFloat(rc.maxWidth)
+
             let width = bar.size.width > maxWidth ?
                 maxWidth : bar.size.width
-            
-            let backgroundColor: CGColor = UIColor(red:0.91, green:0.90, blue:0.90, alpha:1.0).cgColor
-            let underThresholdColor: CGColor = UIColor(red:0.31, green:0.74, blue:0.93, alpha:1.0).cgColor
-            let overThresholdColor: CGColor = UIColor(red:0.13, green:0.48, blue:0.75, alpha:1.0).cgColor
 
             let height = viewPortHandler.contentHeight
             let y = CGFloat(data?.y ?? 0)
@@ -483,7 +475,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
             var roundRect = UIBezierPath(roundedRect: backgroundBar, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: radius))
             context.addPath(roundRect.cgPath)
             context.closePath()
-            context.setFillColor(backgroundColor)
+            context.setFillColor(rc.backgroundColor)
             context.fillPath()
 
             if y > 0 {
@@ -493,7 +485,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
                     roundRect = UIBezierPath(roundedRect: fullBar, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: radius))
                     context.addPath(roundRect.cgPath)
                     context.closePath()
-                    context.setFillColor(overThresholdColor)
+                    context.setFillColor(rc.overThresholdColor)
                     context.fillPath()
                 }
 
@@ -507,7 +499,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
                 roundRect = UIBezierPath(roundedRect: thresholdedBar, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: radius))
                 context.addPath(roundRect.cgPath)
                 context.closePath()
-                context.setFillColor(underThresholdColor)
+                context.setFillColor(rc.underThresholdColor)
                 context.fillPath()
             }
         } else {

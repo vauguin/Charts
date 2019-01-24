@@ -463,15 +463,20 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
             let radius = CGFloat(rc.radius)
             let maxWidth = CGFloat(rc.maxWidth)
 
-            let width = bar.size.width > maxWidth ?
-                maxWidth : bar.size.width
+            var width = bar.size.width
+            var originX = bar.origin.x
+            // Only threshold the width, if maxWidth > 0
+            if maxWidth > 0 && width > maxWidth {
+                width = maxWidth
+                originX += (bar.size.width - width) / 2
+            }
 
             let height = viewPortHandler.contentHeight
             let y = CGFloat(data?.y ?? 0)
 
             // Background bar
             let yOrigin = (2 * radius) / 3
-            let backgroundBar = CGRect(origin: CGPoint(x: bar.origin.x, y: yOrigin), size: CGSize(width: width, height: height))
+            let backgroundBar = CGRect(origin: CGPoint(x: originX, y: yOrigin), size: CGSize(width: width, height: height))
             var roundRect = UIBezierPath(roundedRect: backgroundBar, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: radius))
             context.addPath(roundRect.cgPath)
             context.closePath()
@@ -481,7 +486,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
             if y > 0 {
                 // Over bar
                 if y >= threshold {
-                    let fullBar = CGRect(origin: bar.origin, size: CGSize(width: width, height: bar.size.height))
+                    let fullBar = CGRect(origin: CGPoint(x: originX, y: bar.origin.y), size: CGSize(width: width, height: bar.size.height))
                     roundRect = UIBezierPath(roundedRect: fullBar, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: radius))
                     context.addPath(roundRect.cgPath)
                     context.closePath()
@@ -490,7 +495,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
                 }
 
                 // Under bar
-                var thresholdedBar = CGRect(origin: bar.origin, size: CGSize(width: width, height: bar.size.height))
+                var thresholdedBar = CGRect(origin: CGPoint(x: originX, y: bar.origin.y), size: CGSize(width: width, height: bar.size.height))
                 if y >= threshold {
                     thresholdedBar.size.height = (threshold * thresholdedBar.size.height) / y
                     // Recalculate the origin
